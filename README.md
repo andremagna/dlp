@@ -1,4 +1,4 @@
-# DataLossPrevention – Sentinel Connector (Azure Function)
+# DataLossPrevention – Microsoft Sentinel Connector (Azure Function)
 
 ![C#](https://img.shields.io/badge/C%23-net6.0-blue)
 ![Azure Functions](https://img.shields.io/badge/Azure-Functions%20v4-orange)
