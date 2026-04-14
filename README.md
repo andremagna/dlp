@@ -31,7 +31,7 @@ Microsoft Graph API (user enrichment)
             ↓
 Log Analytics / Azure Sentinel
             ↓
-Azure Blob Storage (state persistence)
+    Azure Blob Storage
 ```
 
 ---
