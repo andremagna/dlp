@@ -12,9 +12,9 @@
 
 **DataLossPrevention** is an Azure Functions solution (.NET 6) that:
 
-* Polls the **Office 365 Management Activity API** for DLP events every 5 minutes
+* Calls the **Office 365 Management Activity API** for DLP events every 5 minutes
 * Enriches events with user data from **Microsoft Graph**
-* Filters and maps DLP operations: `DlpRuleMatch`, `DlpRuleUndo`, `DlpInfo`
+* Filters and maps DLP operations with custom fields: `DlpRuleMatch`, `DlpRuleUndo`, `DlpInfo`
 * Forwards enriched events to **Azure Sentinel / Log Analytics** via HMAC-authenticated POST
 * Persists execution state in **Azure Blob Storage** to prevent missed events
 
@@ -44,8 +44,8 @@ DataLossPrevention/
 ├── DataLossPrevention.sln
 │
 └── DataLossPrevention/
-    ├── Function1.cs               ← Timer trigger + ETL orchestration
-    ├── DlpRootDataModel.cs        ← DLP event data model
+    ├── Function1.cs
+    ├── DlpRootDataModel.cs
     ├── OfficeContentTypeDataModel.cs
     ├── host.json
     ├── local.settings.json
@@ -152,7 +152,7 @@ az functionapp deployment source config-zip ...
 ## 📜 Logging
 
 * Azure Functions built-in ILogger
-* Execution steps logged at each stage (1st–4th Step)
+* Execution steps logged at each steps
 * Errors logged with exception messages
 
 ---
